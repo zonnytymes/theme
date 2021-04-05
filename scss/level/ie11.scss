@@ -1,0 +1,129 @@
+@media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {
+/*-----------------------------------------------
+*
+* IE 11 Styles
+*
+*-----------------------------------------------*/
+
+
+
+
+/**
+* Homepage - News (view)
+*/
+.views-element-container .rows.news {
+
+  header,
+  footer {
+    text-align: center;
+  }
+
+  .card-deck {
+    align-items: normal;
+    flex-flow: unset;
+    display: table;
+    border-collapse: separate;
+    border-spacing: 20px;
+
+    @media(max-width: 991px) {
+      display: block;
+      margin: 0 15px;
+    }
+
+    .card {
+      flex-basis: unset;
+      display: table-cell;
+      width: 33%;
+
+      //background: #fff;
+      //border: 1px solid #fff;
+
+      @media(max-width: 991px) {
+        display: block;
+        flex-basis: unset;
+        width: 100%;
+        margin: 0 0 20px 0;
+      }
+    }
+  }
+}
+
+
+/**
+* Community Outreach (view)
+*/
+.view.news-community-outreach {
+	
+  header,
+  footer {
+    text-align: center;
+  }
+
+  .card-deck {
+    align-items: normal;
+    flex-flow: unset;
+    display: table;
+    border-collapse: separate;
+    border-spacing: 20px;
+
+    @media(max-width: 991px) {
+      display: block;
+    }
+
+    &> div {
+      flex-basis: unset;
+      display: table-cell;
+      width: 33%;
+
+      background: #fff;
+      border: 1px solid #fff;
+
+      @media(max-width: 991px) {
+        display: block;
+        flex-basis: unset;
+        width: 100%;
+        margin: 0 0 20px 0;
+      }
+    }
+
+    .card {
+    	background: transparent;
+    	border: none;
+    	display: block;
+    	flex: none;
+    	flex-direction: unset;
+    	margin: 0;
+      text-align: left;
+
+      @media(min-width: 992px) {
+        flex-basis: unset;
+        width: auto;
+        height: auto;
+      }
+    }
+  }
+}
+
+
+/**
+* Diversity page
+*/
+
+// Partner Logos
+.views-element-container .partners {
+
+  &> div {
+    img {
+      width: auto;
+      max-width: 180px;
+      height: auto;
+      max-height: none;
+    }
+  }
+
+}
+
+
+
+/* END: IE 11 Styles */
+}

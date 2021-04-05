@@ -1,0 +1,333 @@
+/* Hover box services view */
+
+// .services [class*=col] {
+//   padding: 0;
+// }
+
+.row.no-gutters {
+  .services {
+    margin-bottom: 0px;
+  }
+}
+
+.services {
+  margin-bottom: 10px;
+  /* added padding */
+  .gallery [class*=col] {
+      padding: 0;
+  }
+
+  .box {
+    position: relative;
+    float: left;
+    overflow: hidden;
+    cursor: pointer;
+    width: 100%;
+    background-size: cover !important;
+
+    .scale-caption {
+      @media only screen and (min-width: 769px) {
+        width: 100%;
+        height: 100%;
+      }
+
+      &:hover{
+
+        .caption-text {
+          background: none;
+          top: 0;
+          left: 0;
+          position: relative;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+        }
+      }
+
+      a {
+        text-decoration: none;
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        align-items: center;
+        justify-content: center;
+      }
+
+      &:not(:hover) {
+
+        @media only screen and (min-width: 992px) {
+
+          p {
+            position: absolute !important;
+            top: -9999px !important;
+            left: -9999px !important;
+          }
+
+          .caption-title {
+            width: 100%;
+            /* bottom: -170px; */
+            opacity: 1;
+            /* padding: 10%; */
+            padding-top: 5px;
+
+            h3 {
+              color: #fff;
+              padding-top: 5px;
+            }
+          }
+          .caption-text {
+             bottom: 0;
+             min-height: 80px;
+          }
+        }
+      }
+    }
+
+    h3 a {
+      color: #0088cd;
+      text-decoration: none;
+    }
+
+    a {
+      color: #fff;
+      text-decoration: underline;
+    }
+
+    .caption {
+      position: absolute;
+      left: 0;
+      opacity: 0;
+      z-index: 100;
+      color: #fff;
+      -webkit-transition: all 300ms ease-out;
+      -o-transition: all 300ms ease-out;
+      transition: all 300ms ease-out;
+      text-align: center;
+
+      &:hover {
+        background-color: rgba(3,25,109,.8);
+        opacity: 1;
+      }
+    }
+
+    h3 {
+      font-size: 20px;
+      color: #fff;
+      padding-top: 10px;
+    }
+
+    .caption-text {
+      position: absolute;
+      -webkit-transform: none;
+      transform: none;
+      width: 100%;
+      padding: 10px;
+      display: flex;
+
+      @media only screen and (max-width: 768px) {
+        bottom: 0;
+      }
+    }
+  }
+
+  .box:after {
+    content: "";
+    display: block;
+    padding-bottom: 90%;
+  }
+
+
+  .box:hover .scale-caption .caption-text p {
+    opacity: 1;
+  }
+
+  .box:hover img,.pt-cv-content-item:hover img {
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+
+  .caption-title h3 {
+    margin-top: 5px;
+  }
+}
+
+.caption-title {
+  border-bottom: 1px solid #fff;
+  width: 100%;
+
+  h3 {
+    padding-bottom: 10px;
+    font-weight: 500;
+  }
+}
+
+.project-teaser {
+  padding-top: 10px;
+  width: 100%;
+}
+
+.services-teaser {
+  display: flex;
+
+  a {
+    padding-right: 10px;
+  }
+
+  h2 {
+    display: none;
+  }
+
+  svg {
+    max-width: 30px;
+    height: auto;
+    margin-right: 15px;
+
+    path {
+      fill: #fff;
+    }
+
+    polygon#Path {
+      fill: #fff;
+    }
+  }
+}
+/* End hover box services view */
+
+.services-teaser-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 10px;
+
+  .icon{
+    background: #04186e;
+    border-radius: 50%;
+  }
+
+  svg {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    text-decoration: none;
+    height: 80px;
+    width: 80px;
+    padding: 10px;
+
+    path {
+      fill: #fff;
+    }
+
+    polygon#Path {
+      fill: #fff;
+    }
+  }
+}
+
+.card.services {
+  padding: 15px;
+}
+
+@media only screen and (max-width: 991px) {
+  .services .box {
+    .caption {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      opacity: 1;
+      width: 100%;
+      height: auto;
+      background-color: rgba(3,25,109,.8);
+      min-height: 170px;
+    }
+
+    .caption-text {
+      position: relative;
+    }
+  }
+
+  .services .box .scale-caption p {
+    position: inherit;
+    font-size: 12px;
+  }
+}
+
+.item-list-services ul {
+  list-style: none;
+  padding-left: 0;
+
+  @media only screen and (min-width: 769px) {
+    columns: 3;
+    -webkit-columns: 3;
+    -moz-columns: 3;
+  }
+}
+
+.expertise-header {
+  text-align: center;
+  padding-bottom: 30px;
+
+  .btn {
+    @media only screen and (max-width: 768px) {
+      font-size: 12px;
+    }
+  }
+}
+
+.item-list-services ul li {
+  @media only screen and (min-width: 769px) {
+    padding-right: 40px;
+  }
+
+  padding-top: 15px;
+  padding-bottom: 15px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  /* text-align: center; */
+  border-top: 1px solid;
+  // border-bottom: 1px solid;
+  // margin-bottom: 10px;
+  padding-left: 10px;
+  width: 100%;
+
+  &:hover {
+    background-color: #b2b2b2;
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: none;
+  }
+}
+
+button.owl-prev {
+  background: transparent !important;
+  border: 0;
+}
+
+.projects-slider {
+  button.owl-prev {
+    width: 15px;
+    height: 50px;
+    border: 0;
+    background: url(/themes/custom/level/img/arrow-left-white.svg) !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+  }
+
+  button.owl-next {
+    width: 15px;
+    height: 50px;
+    border: 0;
+    background: url(/themes/custom/level/img/arrow-right-white.svg) !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+  }
+}
+
+.path-taxonomy h1,.page-node-type-project h1, .page-node-type-project .teaser-project {
+  padding-left: 15px;
+  padding-right: 15px;
+}

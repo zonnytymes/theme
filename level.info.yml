@@ -1,0 +1,25 @@
+core: 8.x
+type: theme
+base theme: stable
+
+name: 'Level One'
+description: 'Custom level One Theme'
+package: 'Bootstrap'
+
+libraries:
+  - 'level/global-styling'
+
+regions:
+  search: Search
+  header: Header
+  primary_menu: 'Primary menu'
+  page_top: 'Page top'
+  highlighted: Highlighted
+  breadcrumb: Breadcrumb
+  content: Content
+  sidebar_first: 'Sidebar first'
+  footer_first: 'Footer First'
+  footer_logo: 'Footer Logo'
+  footer_menu: 'Footer Menu'
+  social: 'Social'
+  copyright: 'Copyright'

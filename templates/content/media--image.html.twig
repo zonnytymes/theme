@@ -1,0 +1,22 @@
+{#
+/**
+ * @file
+ * Theme override to display a media item.
+ *
+ * Available variables:
+ * - name: Name of the media.
+ * - content: Media content.
+ *
+ * @see template_preprocess_media()
+ */
+#}
+<article{{ attributes }}>
+  {{ title_suffix.contextual_links }}
+  {% if content.field_image_link['#items'].getValue() %}
+    <a href="{{ content.field_image_link}}">
+      {{ content.field_media_image}}
+    </a>
+    {% else %}
+      {{ content.field_media_image }}
+  {% endif %}
+</article>

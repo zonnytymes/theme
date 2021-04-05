@@ -1,0 +1,49 @@
+/**
+* paragraph colors
+*/
+
+.paragraph--color--blue {
+  background: $darkblue;
+}
+
+.paragraph--color--light-blue {
+  background: $blue-grey;
+}
+
+.paragraph--color--light-grey {
+  background: $light-grey;
+}
+
+.paragraph--color--gold {
+  background: $gold;
+}
+
+.paragraph--color--brown {
+  background: $brown;
+}
+
+.paragraph--color--transparent-black {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.paragraph--color--transparent-white {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+// white text colors... for dark bg colors
+.paragraph--color--brown,
+.paragraph--color--blue, {
+  color: #fff;
+
+  h1,h2,h3,h4,h5,h6 {
+    color: #fff;
+  }
+
+  a {
+    color: #ddd;
+  }
+
+  a:hover {
+    color: #fff;
+  }
+}

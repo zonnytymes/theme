@@ -1,0 +1,31 @@
+{#
+/**
+ * @file
+ * Theme override for the node title field.
+ *
+ * This is an override of field.html.twig for the node title field. See that
+ * template for documentation about its details and overrides.
+ *
+ * Available variables:
+ * - attributes: HTML attributes for the containing span element.
+ * - items: List of all the field items. Each item contains:
+ *   - attributes: List of HTML attributes for each item.
+ *   - content: The field item content.
+ * - entity_type: The entity type to which the field belongs.
+ * - field_name: The name of the field.
+ * - field_type: The type of the field.
+ * - label_display: The display settings for the label.
+ *
+ * @see field.html.twig
+ */
+#}
+{%- for item in items -%}
+  <div class="addtoany_list a2a_kit_size_32">
+      <a class="a2a_button_print" target="blank" rel="nofollow" href="{{ item.content }}"> <span class="a2a_svg a2a_s__default">
+        <img src="/themes/custom/level/img/pdf.svg">
+    </span>
+  </a>
+  </div>
+{%- endfor -%}
+
+{# <a class="a2a_button_print" target="" href="/#print" rel="nofollow"><span class="a2a_svg a2a_s__default a2a_s_print" style="background-color: rgb(1, 102, 255);"><svg focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M22.5 19.59V24h-13v-4.41z" fill="#fff" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1.4"></path><path d="M9.44 21.12H6.38a.8.8 0 0 1-.87-.7v-7.35a.8.8 0 0 1 .88-.7h19.23a.8.8 0 0 1 .88.7v7.35a.8.8 0 0 1-.88.7h-3.06" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1.4"></path><path d="M22.5 12.32V8h-13v4.28" fill="#fff" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1.4"></path></svg></span><span class="a2a_label">Print</span></a> #}

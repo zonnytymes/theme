@@ -1,0 +1,154 @@
+/* Card css overrides */
+
+.card img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+}
+
+.card-body {
+  p {
+    color: #000;
+  }
+  h2 {
+  font-size: 20px;
+
+    a {
+      color: $darkblue;
+    }
+  }
+}
+
+.card-deck:not(first-of-type) {
+  margin-top: 30px;
+}
+
+// Card deck
+
+.card-deck {
+  display: flex;
+  flex-direction: column;
+
+  .card {
+    @include media-breakpoint-up(sm) {
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+
+  > div {
+    margin-bottom: $card-deck-margin;
+  }
+
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+     /* IE10+ CSS styles go here */
+   @include media-breakpoint-up(sm) {
+    .card {
+        flex-grow: 1;
+        flex: none;
+      }
+    }
+  }
+
+  @include media-breakpoint-up(sm) {
+    flex-flow: row wrap;
+
+    > div {
+      display: flex;
+      // Flexbugs #4: https://github.com/philipwalton/flexbugs#flexbug-4
+      flex: 1 0 0%;
+      flex-direction: column;
+      margin-right: $card-deck-margin;
+      margin-bottom: 0; // Override the default
+      margin-left: $card-deck-margin;
+    }
+  }
+}
+
+
+//
+// Card groups
+//
+
+.card-group {
+  display: flex;
+  flex-direction: column;
+
+  // The child selector allows nested `.card` within `.card-group`
+  // to display properly.
+  > div {
+    margin-bottom: $card-group-margin;
+  }
+
+  @include media-breakpoint-up(sm) {
+    flex-flow: row wrap;
+    // The child selector allows nested `.card` within `.card-group`
+    // to display properly.
+    > div {
+      // Flexbugs #4: https://github.com/philipwalton/flexbugs#flexbug-4
+      flex: 1 0 0%;
+      margin-bottom: 0;
+
+      + .card {
+        margin-left: 0;
+        border-left: 0;
+      }
+
+      // Handle rounded corners
+      @if $enable-rounded {
+        &:not(:last-child) {
+          @include border-right-radius(0);
+
+          .card-img-top,
+          .card-header {
+            // stylelint-disable-next-line property-blacklist
+            border-top-right-radius: 0;
+          }
+          .card-img-bottom,
+          .card-footer {
+            // stylelint-disable-next-line property-blacklist
+            border-bottom-right-radius: 0;
+          }
+        }
+
+        &:not(:first-child) {
+          @include border-left-radius(0);
+
+          .card-img-top,
+          .card-header {
+            // stylelint-disable-next-line property-blacklist
+            border-top-left-radius: 0;
+          }
+          .card-img-bottom,
+          .card-footer {
+            // stylelint-disable-next-line property-blacklist
+            border-bottom-left-radius: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+//
+// Columns
+//
+
+.card-columns {
+  > div {
+    margin-bottom: $card-columns-margin;
+  }
+
+  @include media-breakpoint-up(sm) {
+    column-count: $card-columns-count;
+    column-gap: $card-columns-gap;
+    orphans: 1;
+    widows: 1;
+
+    > div {
+      display: inline-block; // Don't let them vertically span multiple columns
+      width: 100%; // Don't let their width change
+    }
+  }
+}

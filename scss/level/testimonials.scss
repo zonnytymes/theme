@@ -1,0 +1,17 @@
+.testimonials {
+  align-items: center;
+  min-height: 340px;
+
+  @media only screen and (min-width: 769px) {
+    display: flex;
+  }
+
+  .testimonials_text {
+    color: #fff;
+    padding: 30px;
+
+    h4 {
+      color: #fff;
+    }
+  }
+}

@@ -1,0 +1,34 @@
+
+/* footer social icons */
+ul.social-network {
+  list-style: none;
+  display: flex;
+  padding: 0;
+
+  @media (min-width: 769px) {
+    justify-content: flex-end;
+  }
+}
+
+ul.social-network li {
+  display: flex;
+  justify-content: center;
+  background: #fff;
+  width: 32px;
+  height: 32px;
+  text-align: center;
+  margin-right: 10px;
+
+  img.fab.fa-google-plus {
+    width: 24px;
+    padding-top: 5px;
+  }
+
+  img.fab.fa-facebook-f,img.fab.fa-instagram,img.fab.fa-twitter  {
+    padding-top: 4px;
+  }
+
+  a.icoLinkedin img {
+    padding-top: 5px;
+  }
+}

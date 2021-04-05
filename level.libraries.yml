@@ -1,0 +1,20 @@
+global-styling:
+  css:
+    theme:
+      css/styles.css: {}
+      css/owl.carousel.min.css: {}
+      css/owl.theme.default.min.css: {}
+  js:
+    js/scripts.js: {}
+    js/wow.min.js: {}
+    js/carousel.js: {}
+    js/owl.carousel.min.js: {}
+    js/classie.js: {}
+    js/modernizr.custom.js: {}
+    js/uisearch.js: {}
+  dependencies:
+    - core/jquery
+fonts:
+  css:
+    theme:
+      'https://fonts.googleapis.com/css?family=Montserrat&display=swap': { type: external }

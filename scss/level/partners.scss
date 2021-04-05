@@ -1,0 +1,29 @@
+.page-node-13,.page-node-97,.page-node-104,.page-node-105 {
+  article {
+
+    img {
+      width: 100%;
+      height: auto;
+      max-height: 100%;
+      max-width: 200px;
+      border: #ebebeb solid 8px;
+    }
+  }
+
+  .col-md {
+    @media (min-width: 769px) {
+      flex-basis: 16.666%;
+      flex-grow: unset;
+      min-width: 0;
+      max-width: 100%;
+    }
+
+    @media (max-width: 768px) {
+      flex: 50%;
+
+      .paragraph--type--bp-image {
+        text-align: center;
+      }
+    }
+  }
+}

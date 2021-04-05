@@ -1,0 +1,154 @@
+.views-view-grid.horizontal.cols-3.clearfix {
+  .views-row > div {
+     float: left;
+     width: 100% !important;
+
+    @media (min-width: 960px) {
+      width: 33.33% !important;
+      padding: .5%;
+    }
+
+    @media (min-width: 769px) and (max-width: 959px) {
+      width: 49%;
+      float: left;
+      padding: .5%;
+    }
+  }
+}
+
+.callout {
+  .callout-content {
+    padding-left: 20px;
+    padding-left: 20px;
+  }
+}
+
+.card-class {
+  padding: 0 10px 10px 10px;
+  color: #fff;
+
+  > div {
+    display: flex;
+    flex-flow: wrap;
+
+    > div {
+      flex: 0 0 50%;
+    }
+  }
+}
+
+/**
+* Project listings form
+*/
+#views-exposed-form-projects-block-1,#views-exposed-form-employees-block-1 {
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid $light-grey;
+  border-bottom: 1px solid $light-grey;
+  margin-bottom: 20px;
+
+  @media (min-width: 768px) {
+    display: flex;
+  }
+
+  .js-form-item {
+    padding: 10px;
+  }
+
+  label {
+    font-weight: bold;
+    display: none;
+  }
+
+  .apply {
+    text-align: center;
+  }
+}
+
+span.a2a_kit.a2a_kit_size_32.addtoany_list {
+  margin-bottom: 45px;
+  display: block;
+}
+
+.taxonomy-project {
+  margin-bottom: 30px;
+
+  a:not(:last-child):after {
+    content: ",";
+    padding-right: 5px;
+  }
+}
+
+.taxonomy-project-services {
+  margin-bottom: 30px;
+
+  span:not(:last-child):after {
+    content: ",";
+  }
+}
+
+.featured-image img {
+  width: 100%;
+  height: auto;
+}
+
+.featured-project,.paragraph--type--image-with-text-overlay .paragraph__column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  min-height: 350px;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media (min-width: 768px) {
+    height: 50vh;
+  }
+
+  .featured-content {
+    padding: 15px;
+  }
+}
+
+.container-fluid.related-projects {
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  margin-bottom: 30px;
+
+  h2 {
+    padding-top: 20px;
+    padding-bottom: 14px;
+  }
+}
+
+.addtoany_list.a2a_kit_size_32 a > span {
+  background: rgb(1, 102, 255);
+  text-align: center;
+
+  img {
+    width: 50%;
+    height: auto;
+    margin-top: -5px;
+  }
+}
+
+a.a2a_button_print {
+  margin-top: 3px;
+  margin-left: -3px;
+}
+
+.taxonomy-location {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+span.a2a_kit.a2a_kit_size_32.addtoany_list {
+  margin-bottom: 45px;
+  display: inline;
+}
+
+.teaser-project {
+  margin-bottom: -30px;
+  font-style: italic;
+  font-weight: bold;
+}
